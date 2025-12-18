@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>LP_ハンバーガーメニュー_テンプレート</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1 class="site-header__logo">
+          <a href="/">LOGO</a>
+        </h1>
+
+        <button
+          class="hamburger"
+          type="button"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+          aria-controls="global-nav"
+        >
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+        <nav id="global-nav" class="global-nav" aria-label="グローバルナビゲーション">
+          <ul class="global-nav__list">
+            <li class="global-nav__item">
+              <a href="#plan" class="global-nav__link">料金プラン</a>
+            </li>
+            <li class="global-nav__item">
+              <a href="#news" class="global-nav__link">お知らせ</a>
+            </li>
+            <li class="global-nav__item">
+              <a href="#contact" class="global-nav__link">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="overlay" tabindex="-1"></div>
+      </div>
+    </header>
+  </body>
+</html>

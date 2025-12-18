@@ -1,0 +1,130 @@
+.site-header {
+  position: relative;
+  z-index: 100;
+  background-color: #fff;
+}
+.site-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .site-header__inner {
+    padding: 1.5rem 2rem;
+  }
+}
+.site-header__logo a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 44px;
+  height: 44px;
+  padding: 11px 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 210;
+}
+.hamburger__line {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s;
+  transform-origin: center;
+}
+
+.hamburger.is-open .hamburger__line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.is-open .hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-open .hamburger__line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.global-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 90%;
+  max-width: 320px;
+  height: 100vh;
+  background-color: #fff;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  z-index: 200;
+}
+
+.global-nav__list {
+  list-style: none;
+  padding: 4rem 2rem;
+  margin: 0;
+}
+
+.global-nav__item + .global-nav__item {
+  margin-top: 1.5rem;
+}
+
+.global-nav__link {
+  display: block;
+  font-size: 1.125rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.global-nav.is-open {
+  transform: translateX(0);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 150;
+}
+
+.overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .global-nav {
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+    max-width: none;
+  }
+  .global-nav__list {
+    display: flex;
+    padding: 0;
+  }
+  .global-nav__item + .global-nav__item {
+    margin-top: 0;
+    margin-left: 2rem;
+  }
+  .overlay {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
